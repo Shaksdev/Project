@@ -205,7 +205,8 @@
 }
 
 #hero {
-    background-image: url(/indexBanner.0b5f115.jpg);
+    /* background-image: url(/indexBanner.0b5f115.jpg); */
+    background-image: url("../indexBanner.0b5f115.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 70% center;
