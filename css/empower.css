@@ -4,14 +4,6 @@
     box-sizing: border-box;
 }
 
-#play4 {
-    background-image: url(../header.d72cbbfplay4achild.png);
-    padding: 14rem 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 #corp {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(33, 15, 96);
@@ -71,6 +63,14 @@
     padding-left: 0.5rem;
 }
 
+#bg {
+    background-image: url(../header.104db4b.png);
+    padding: 14rem 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 #Play4aChild {
     background-color: rgb(33, 15, 96);
 }
@@ -85,7 +85,7 @@
 }
 
 /* #flex9 {
-    width: 76%;
+    width: 80%;
 } */
 
 h1 {
@@ -99,17 +99,19 @@ h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     font-size: 1.3rem;
-    line-height: 2.1rem;
-    padding-top: 1.5rem;
-    width: 81%;
+    line-height: 2.2rem;
+    padding-top: 1.8rem;
+    width: 82%;
+    /* width: 61%; */
 }
 
 #flex3 {
     display: flex;
-    padding-left: 0.84rem;
+    margin-left: -1.5rem;
+    /* padding-left: 0.84rem; */
 }
 
-#flex11 {
+#flex10 {
     display: flex;
     padding-top: 1.5rem;
 }
@@ -121,9 +123,17 @@ h1 {
     font-weight: 800;
 }
 
+#socio1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 3rem;
+    font-weight: 800;
+    padding-top: 2rem;
+}
+
 #merge {
-    padding-top: 2.3rem;
-    padding-right: 3rem;
+    /* padding-top: 2.3rem; */
+    margin-left: 2rem;
 }
 
 #bord1 {
@@ -136,7 +146,23 @@ h1 {
     font-size: 1.6rem;
     font-weight: 600;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 48%;
+    width: 45%;
+    line-height: 1.7rem;
+}
+
+#bord3 {
+    color: rgb(29, 201, 153);
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 45%;
+    line-height: 1.7rem;
+}
+
+#reliant {
+    padding-block: 3.5rem;
+    background-color: rgb(201, 243, 232);
+
 }
 
 #prog {
@@ -179,7 +205,7 @@ h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(57, 15, 96);
     font-size: 1.2rem;
-    width: 94%;
+    width: 93%;
     line-height: 2rem;
 }
 
@@ -187,12 +213,13 @@ h2 {
     width: 90%;
     margin: auto;
     display: flex;
+    justify-content: space-between;
 }
 
 #src {
     /* height: 48vh; */
-    width: 84%;
-    height: 89%;
+    width: 88%;
+    /* height: 89%; */
     padding-top: 1rem;
 }
 
@@ -200,26 +227,20 @@ h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(57, 15, 96);
     font-size: 1.2rem;
+    line-height: 2.5rem;
+    width: 87%;
 }
 
-/* #free li {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(57, 15, 96);
-    font-size: 1.2rem;
-} */
 #free {
     padding-left: 1.4rem;
     line-height: 2rem;
 }
 
-#free #quary {
-    width: 99%;
-}
-
-#free #qua {
+#free li {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(57, 15, 96);
     font-size: 1.2rem;
+    line-height: 3rem;
 }
 
 #we {
@@ -229,140 +250,24 @@ h2 {
     font-weight: 800;
     width: 90%;
     margin: auto;
-    padding-block: 2.5rem;
+    padding-top: 2.5rem;
 }
 
-#bgc {
-    background-color: rgb(201, 243, 232);
-}
-
-#flex5 {
+#cross {
     width: 90%;
     margin: auto;
-    /* display: flex; */
-}
-
-#flex6 {
-    /* width: 90%; */
-    display: flex;
-}
-
-#makoko {
-    width: 100%;
-}
-
-#yaba {
-    width: 89%;
-}
-
-#yaba img {
-    /* height: 49vh; */
-    height: 78%;
-}
-
-#agege {
-    width: 100%;
-    padding-top: 1.5rem;
-}
-
-#kits {
-    width: 89%;
-    padding-top: 1.5rem;
-}
-
-#makoko img {
-    border-radius: 1rem;
-}
-
-#yaba img {
-    border-radius: 1rem;
-}
-
-#agege img {
-    /* height: 50.7vh; */
-    height: 76.5%;
-    border-radius: 1rem;
-}
-
-#kits img {
-    border-radius: 1rem;
-}
-
-#lag {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    font-size: 0.9rem;
-    color: rgb(33, 15, 96);
-}
-
-#click {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    padding-block: 1rem;
-}
-
-#click button {
-    height: 4rem;
-    width: 27%;
-    background-color: rgb(29, 207, 159);
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
-}
-
-#click button a {
-    color: white;
-    text-decoration: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.2rem;
-    font-weight: 800;
-}
-
-#cation {
-    width: 90%;
-    margin: auto;
-}
-
-#app {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(33, 15, 96);
-    font-size: 2.5rem;
-    font-weight: 800;
     padding-top: 1rem;
 }
 
-#non {
+#pic {
+    background-color: rgb(201, 243, 232);
+    padding-block: 2rem;
+}
+
+#act {
+    text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(33, 15, 96);
-    font-size: 1.3rem;
-    line-height: 2.3rem;
-    width: 99%;
-    padding-block: 1.2rem;
-}
-
-#clicked {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    padding-bottom: 3rem;
-}
-
-#clicked button {
-    height: 4rem;
-    width: 35%;
-    background-color: rgb(29, 207, 159);
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
-}
-
-#clicked button a {
-    color: white;
-    text-decoration: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.2rem;
-    font-weight: 800;
 }
 
 #container2 {
@@ -467,6 +372,7 @@ h4 {
 @media (max-width:1199px) {
     #flex {
         display: block;
+        width: 92%;
     }
 
     h1 {
@@ -474,32 +380,52 @@ h4 {
     }
 
     #games {
-        font-size: 1.01rem;
-        line-height: 1.7rem;
-        font-weight: 600;
-        padding-top: 1rem;
-    }
-
-    #games {
         width: 100%;
-    }
-
-    #flex11 {
-        padding-left: 0.2rem;
+        font-size: 1.02rem;
+        font-weight: 600;
+        line-height: 1.6rem;
+        padding-top: 1.4rem;
     }
 
     h2 {
         font-size: 1.7rem;
-        padding-top: 2rem;
     }
 
     #bord2 {
-        width: 16%;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        width: 14%;
+        line-height: 1.2rem;
+    }
+
+    #bord3 {
+        font-size: 1.1rem;
+        width: 19%;
+        line-height: 1.2rem;
     }
 
     #socio {
-        font-size: 2rem;
+        font-size: 1.9rem;
+    }
+
+    #socio1 {
+        font-size: 1.9rem;
+        padding-top: 0;
+    }
+
+    #flex3 {
+        padding-left: 0.6rem;
+    }
+
+    #merge {
+        padding-top: 1rem;
+    }
+
+    #vision {
+        width: 95%;
+    }
+
+    #lives {
+        width: 100%;
     }
 
     #dev {
@@ -511,75 +437,11 @@ h4 {
         width: 100%;
     }
 
-    #flex6 {
-        display: block;
-    }
-
-    #yaba {
-        width: 100%;
-    }
-
-    #kits {
-        width: 100%;
-    }
-
-    #makoko img {
-        width: 100%;
-        max-height: 30vh;
-    }
-
-    #yaba img {
-        width: 100%;
-        max-height: 29vh;
-    }
-
-    #agege img {
-        width: 100%;
-        max-height: 29vh;
-    }
-
-    #kits img {
-        width: 100%;
-        max-height: 29vh;
-    }
-
-    #flex5 {
+    #we {
         width: 95%;
     }
 
-    #click {
-        width: 95%;
-    }
-
-    #clicked {
-        width: 95%;
-    }
-
-    #click button {
-        width: 100%;
-    }
-
-    #clicked button {
-        width: 100%;
-    }
-
-    #click button a {
-        font-size: 1rem;
-    }
-
-    #clicked button a {
-        font-size: 1rem;
-    }
-
-    #app {
-        font-size: 1.5rem;
-    }
-
-    #cation {
-        width: 95%;
-    }
-
-    #vision {
+    #cross {
         width: 95%;
     }
 }
@@ -790,19 +652,5 @@ h4 {
 
     #plot a {
         font-size: 0.8rem;
-    }
-}
-
-@media (max-width:300px) {
-    #click button a {
-        font-size: 0.8rem;
-    }
-
-    #clicked button a {
-        font-size: 0.8rem;
-    }
-
-    #bord2 {
-        font-size: 0.9rem;
     }
 }

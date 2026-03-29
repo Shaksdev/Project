@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/play4.css">
+    <title>Document</title>
+</head>
+<style>
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    :root {
+        --green: #3dbe6c;
+        --white: #ffffff;
+        --border: #ebebeb;
+        --text-dark: #1a1a1a;
+        --text-mid: #555555;
+        --nav-h: 66px;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        background: #f2f2f2;
+    }
+
+    #mob-chk {
+        display: none;
+    }
+
+    /* ══ HEADER ══ */
+    header {
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        position: sticky;
+        top: 0;
+        z-index: 900;
+    }
+
+    .nav-wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        height: var(--nav-h);
+        display: flex;
+        align-items: center;
+        padding: 0 28px;
+    }
+
+    /* ══ LOGO ══ */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        text-decoration: none;
+        margin-right: 48px;
+        flex-shrink: 0;
+    }
+
+    .logo svg {
+        width: 34px;
+        height: 34px;
+    }
+
+    .logo-text {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--text-dark);
+        letter-spacing: -0.3px;
+    }
+
+    /* ══ NAV LIST ══ */
+    .nav-list {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        height: 100%;
+    }
+
+    /* plain link */
+    .nav-a {
+        display: inline-flex;
+        align-items: center;
+        height: var(--nav-h);
+        padding: 0 18px;
+        font-size: 14px;
+        font-weight: 500;
+        /* color: var(--text-mid); */
+        color: rgb(33, 15, 96);
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        white-space: nowrap;
+        transition: color .15s;
+    }
+
+    .nav-a:hover {
+        color: var(--green);
+    }
+
+    .nav-a.active {
+        /* color: var(--green); */
+        color: rgb(71, 216, 176);
+        font-weight: 900;
+        /* border-bottom-color: var(--green); */
+    }
+
+    /* ══ HOVER DROPDOWN ══ */
+    .nav-item {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-item>.nav-trigger {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        height: var(--nav-h);
+        padding: 0 18px;
+        font-size: 14px;
+        font-weight: 500;
+        color: rgb(33, 15, 96);
+        /* color: var(--text-mid); */
+        white-space: nowrap;
+        border-bottom: 2px solid transparent;
+        cursor: default;
+        user-select: none;
+        transition: color .15s;
+    }
+
+    .nav-item:hover>.nav-trigger {
+        color: var(--green);
+    }
+
+    .chev {
+        width: 13px;
+        height: 13px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 2.2;
+        transition: transform .2s;
+        margin-top: 1px;
+    }
+
+    .nav-item:hover .chev {
+        transform: rotate(180deg);
+    }
+
+    /* dropdown panel — shows on :hover of .nav-item */
+    .dropdown {
+        position: absolute;
+        top: calc(var(--nav-h) - 2px);
+        left: 0;
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.10);
+        padding: 6px 0;
+        min-width: 190px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-4px);
+        transition: opacity .16s ease, transform .16s ease;
+        z-index: 999;
+    }
+
+    /* bridge so mouse can travel to dropdown */
+    .dropdown::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 0;
+        right: 0;
+        height: 10px;
+    }
+
+    .nav-item:hover .dropdown {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0);
+    }
+
+    .dd-row {
+        display: block;
+        padding: 10px 20px;
+        font-size: 13.5px;
+        font-weight: 400;
+        color: var(--text-dark);
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background .12s, color .12s;
+    }
+
+    .dd-row:hover {
+        background: #f6fdf8;
+        color: var(--green);
+    }
+
+    /* ══ HAMBURGER ══ */
+    .burger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        width: 38px;
+        height: 38px;
+        padding: 8px;
+        cursor: pointer;
+        border-radius: 6px;
+        margin-left: auto;
+        transition: background .14s;
+    }
+
+    .burger:hover {
+        background: #f6fdf8;
+    }
+
+    .burger span {
+        display: block;
+        height: 2px;
+        background: var(--text-dark);
+        border-radius: 2px;
+        transition: all .22s;
+        transform-origin: center;
+    }
+
+    #mob-chk:checked~header .burger span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    #mob-chk:checked~header .burger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mob-chk:checked~header .burger span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* ══ MOBILE OVERLAY ══ */
+    .mob-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, .32);
+        z-index: 850;
+    }
+
+    #mob-chk:checked~.mob-overlay {
+        display: block;
+    }
+
+    /* ══ MOBILE DRAWER ══ */
+    .mob-drawer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 270px;
+        height: 100%;
+        background: var(--white);
+        z-index: 860;
+        transform: translateX(-100%);
+        transition: transform .26s cubic-bezier(.4, 0, .2, 1);
+        overflow-y: auto;
+        padding-bottom: 40px;
+    }
+
+    #mob-chk:checked~.mob-drawer {
+        transform: translateX(0);
+    }
+
+    .mob-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 18px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .mob-close {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: #aaa;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: background .13s, color .13s;
+    }
+
+    .mob-close:hover {
+        background: #f6fdf8;
+        color: var(--green);
+    }
+
+    .mob-acc-chk {
+        display: none;
+    }
+
+    .mob-nav {
+        padding: 6px 0;
+    }
+
+    .mob-plain {
+        display: block;
+        padding: 13px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text-dark);
+        text-decoration: none;
+        transition: color .13s;
+    }
+
+    .mob-plain:hover {
+        color: var(--green);
+    }
+
+    .mob-plain.active {
+        color: var(--green);
+        font-weight: 600;
+    }
+
+    .mob-acc-lbl {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text-dark);
+        cursor: pointer;
+        user-select: none;
+        transition: color .13s;
+    }
+
+    .mob-acc-lbl:hover {
+        color: var(--green);
+    }
+
+    .mob-acc-chk:checked+.mob-acc-lbl {
+        color: var(--green);
+    }
+
+    .mob-acc-chk:checked+.mob-acc-lbl .chev {
+        transform: rotate(180deg);
+    }
+
+    .mob-sub {
+        display: none;
+        background: #fafafa;
+    }
+
+    .mob-acc-chk:checked~.mob-sub {
+        display: block;
+    }
+
+    .mob-sub a {
+        display: block;
+        padding: 9px 20px 9px 30px;
+        font-size: 13px;
+        color: var(--text-mid);
+        text-decoration: none;
+        transition: color .13s;
+    }
+
+    .mob-sub a:hover {
+        color: var(--green);
+    }
+
+    /* ══ RESPONSIVE ══ */
+    @media (max-width: 720px) {
+        .nav-list {
+            display: none;
+        }
+
+        .burger {
+            display: flex;
+        }
+
+        .logo {
+            margin-right: 0;
+        }
+
+        .nav-wrap {
+            padding: 0 18px;
+        }
+    }
+</style>
+
+<body>
+     <header>
+        <div class="nav-wrap">
+
+            <!-- <a class="logo" href="#">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="46" stroke="#3dbe6c" stroke-width="10" fill="none"/>
+        <circle cx="50" cy="50" r="22" stroke="#3dbe6c" stroke-width="8" fill="none"/>
+        <rect x="2" y="40" width="16" height="20" rx="3" fill="#3dbe6c"/>
+      </svg>
+      <span class="logo-text">OPay</span>
+    </a> -->
+            <div class="logo">
+                <img src="../Opay multimedia/opay-logo..svg" alt="">
+            </div>
+            <ul class="nav-list">
+
+                <li><a href="#" class="nav-a active">Personal</a></li>
+
+                <li><a href="#" class="nav-a">Business</a></li>
+
+                <!-- Company — hover -->
+                <li class="nav-item">
+                    <span class="nav-trigger">
+                        Company
+                        <svg class="chev" viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </span>
+                    <div class="dropdown">
+                        <a href="html\about.html" class="dd-row">About Us</a>
+                        <a href="#" class="dd-row">Contact Us</a>
+                    </div>
+                </li>
+
+                <!-- CSR — hover -->
+                <li class="nav-item">
+                    <span class="nav-trigger">
+                        CSR
+                        <svg class="chev" viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </span>
+                    <div class="dropdown">
+                        <!-- <a href="#" class="dd-row">Scholarship Programme</a> -->
+                        <!-- <a href="#" class="dd-row">Play4aChild</a> -->
+                        <!-- <a href="#" class="dd-row">Campus Upgrade</a> -->
+                        <!-- <a href="#" class="dd-row">Empowerment Programme</a> -->
+                        <ul>
+                            <a id="corp" href="#">Corporate Social Responsibility</a>
+                            <li id="edu">EDUCATION</li>
+                            <a id="scholar" href="#">Scholarship Programme</a>
+                            <li><a id="playa" href="html/play4.html">Play4aChild</a></li>
+                            <li id="infrastructure">INFRASTUCTURE</li>
+                            <a id="upg" href="html/campus.html">Campus Upgrade</a>
+                            <li id="empowerment">EMPOWERMENT</li>
+                            <a id="ram" href="html/empower.html">Empowerment Programme</a>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#" class="nav-a">NEWSROOM</a></li>
+
+            </ul>
+
+            <label for="mob-chk" class="burger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </label>
+
+        </div>
+    </header>
+    <div id="play4">
+    </div>
+    <div id="Play4aChild">
+        <div id="flex">
+            <div id="flex9">
+                <h1>Play4aChild</h1>
+                <p id="games">Play4aChild ingeniously merges transactional and leisure activities into everyday OPay
+                    usage, such as playing games, paying utility bills, and making payments for goods and
+                    services. This approach provides a quantifiable, marketable, and allocable platform,
+                    promoting a socio-economic sustainable lifestyle through emerging digital technologies.
+                </p>
+            </div>
+            <div id="merge">
+                <div id="flex3">
+                    <p id="socio">11K</p>
+                    <div id="bord1"></div>
+                    <p id="bord2">Children Supported</p>
+                </div>
+                <div id="flex11">
+                    <p id="socio">40+</p>
+                    <div id="bord1"></div>
+                    <p id="bord2">Primary & Secondary Schools Benefitted</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="prog">
+        <div id="vision">
+            <h2>Program Summary</h2>
+            <h3 id="tar">Vision:</h3>
+            <p id="lives">To transform everyday digital interactions into opportunities for sustainability, enriching
+                lives with purpose and innovation.
+            </p>
+            <h3 id="tar">Mission:</h3>
+            <p id="unified">To create a sustainable future by blending technology, leisure, and daily transactions
+                into a unified platform that drives positive socio-economic impact and promotes a balanced
+                lifestyle.
+            </p>
+        </div>
+    </div>
+    <div id="target">
+        <div id="dev">
+            <div>
+                <h3 id="tar">Target Beneficiaries</h3>
+                <p id="age">Children: Below the age of 18 years</p>
+                <h3 id="tar">Aims and Objectives</h3>
+                <ul id="free">
+                    <li id="quary"><span id="qua">To increase access to quality education for rural and marginalized
+                            children.</span></li>
+                    <li><span id="qua">To provide free universal primary and secondary education.</span></li>
+                    <li><span id="qua">To improve the quality of the teaching and learning environment.</span></li>
+                </ul>
+            </div>
+            <div><img id="src" src="../Opay multimedia/map.382367a.png" alt=""></div>
+        </div>
+    </div>
+    <div id="bgc">
+        <div>
+            <div>
+                <h4 id="we">We are taking action</h4>
+            </div>
+        </div>
+        <div id="flex5">
+            <div id="flex6">
+                <div id="makoko">
+                    <img src="../Opay multimedia/content2.cc27d6d.jpg" alt="" width="95%">
+                    <p id="lag">Donation of educational materials In makoko, Lagos</p>
+                </div>
+                <div id="yaba">
+                    <img src="/Opay multimedia/content3.b9aa5e9.png" alt="" width="100%">
+                    <p id="lag">Donation of educational materials and personal hygiene kits in Yaba, Lagos</p>
+                </div>
+            </div>
+            <div id="flex6">
+                <div id="agege">
+                    <img src="../Opay multimedia/content4.061570c.jpg" alt="" width="95%">
+                    <p id="lag">Donation of educational materials In Agege, Lagos</p>
+                </div>
+                <div id="kits">
+                    <img src="../Opay multimedia/content5.a55ac09.png" alt="" width="100%">
+                    <p id="lag">Donation of educational materials and personal hygiene kits in Yaba, Lagos</p>
+                </div>
+            </div>
+        </div>
+        <div id="click">
+            <button type="submit"><a href="#">Click Here to Play4aChild</a></button>
+        </div>
+        <div>
+            <div id="cation">
+                <h5 id="app">CALL FOR APPLICATION!</h5>
+                <p id="non">Are you a non-governmental organization (NGO) or civil society organization (CSO) interested in 
+                    partnering with OPay for our corporate social responsibility (CSR) projects? Click 
+                    below to learn more about how you can work with us.
+                </p>
+            </div>
+        </div>
+         <div id="clicked">
+            <button type="submit"><a href="#">Click Here to Learn More and Apply</a></button>
+        </div>
+    </div>
+    <div id="container2">
+        <div id="flex2">
+            <div>
+                <div id="press">
+                    <h3>Company</h3>
+                    <p>About us</p>
+                    <p>Press & Media</p>
+                    <p>Contact us</p>
+                    <p>Report an Issue</p>
+                    <p>Security Features</p>
+                </div>
+                <div id="whistle">
+                    <h4>WhistleBlowing Petition:</h4>
+                    <p>whistleblower01@opay-inc.com</p>
+                </div>
+            </div>
+
+            <div id="press">
+                <h3>Resources</h3>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+                <p>SMS Alert Service</p>
+                <p>Documentation</p>
+                <p>Security</p>
+            </div>
+            <div id="press">
+                <h3>Discover</h3>
+                <p>Personal</p>
+                <p>Business</p>
+                <p>Agent Network</p>
+            </div>
+            <div id="press">
+                <h3>OPay Office</h3>
+                <li><b>HQ</b>:Alexander House, Plot 9,</li>
+                <li>Dr Nurudeen Olowopopo Avenue,</li>
+                <li>Alausa, Lagos</li>
+            </div>
+            <div id="plot">
+                <li id="add">Opay Office Address</li>
+                <li><span id="abj">ABUJA:</span>Plot 819, Pushkin Building, Ebitu Ukiwe Street, Jabi, Opposite AA Rano
+                    Fuel Station, Abuja
+                </li>
+                <li><span id="abj">LAGOS, ALLEN IKEJA:</span> No 103 Mosesola House, Allen Road, Ikeja Lagos</li>
+                <li><span id="abj">LAGOS, FESTAC:</span> Plot 3084, 24 Sky Castle Plaza, Festac Access Road, beside
+                    Santiago Hotel, Festac
+                    Town, Lagos</li>
+                <li><span id="abj">LAGOS, IKORODU:</span> No, 132B Lagos Road, Ikorodu Jumofak Bus Stop, Ikorodu, Lagos
+                    State</li>
+                <li><span id="abj">ABEOKUTA:</span> Dolly House Opposite Laroy Hotel, Abiola Way</li>
+                <li><span id="abj">IBADAN:</span> Opay Building, Theophilus Akinyele express, Opposite Zanak filling
+                    station, Akala Express,
+                    Ibadan</li>
+                <a href="#">More</a>
+            </div>
+        </div>
+    </div>
+    <div id="flex4">
+        <div>
+            <img src="../Opay multimedia/opay-logo.b2c090fcheckout.svg" alt="">
+        </div>
+        <div id="copy">
+            <p>&copy; 2023 OPay Digital Services Limited.</p>
+        </div>
+        <div>
+            <img src="../Opay multimedia/footericon1.0292c1d.png" alt="">
+            <img src="../Opay multimedia/footericon2.afdf4b2 X.png" alt="">
+            <img src="../Opay multimedia/footericon3.e7f5e90 insta.png" alt="">
+            <img src="../Opay multimedia/footericon4.32e35d6 linkedin.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

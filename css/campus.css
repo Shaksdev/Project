@@ -1,0 +1,683 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#corp {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(33, 15, 96);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#edu {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.83rem;
+    color: grey;
+}
+
+#scholar {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(33, 15, 96);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#playa {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(33, 15, 96);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#infrastructure {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.83rem;
+    color: grey;
+}
+
+#upg {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(33, 15, 96);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.dropdown ul {
+    list-style: none;
+    width: 16rem;
+    line-height: 2rem;
+    padding-left: 0.5rem;
+}
+
+#empowerment {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.83rem;
+    color: grey;
+}
+
+#ram {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(33, 15, 96);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#bg {
+    background-image: url(../header.90b239f.png);
+    padding: 14rem 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#Play4aChild {
+    background-color: rgb(33, 15, 96);
+}
+
+#flex {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding-block: 2rem;
+    /* gap: 2.5rem; */
+    /* justify-content: space-evenly; */
+}
+
+#flex12 {
+    width: 72%;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    color: white;
+    font-weight: 800;
+    width: 80%;
+}
+
+#games {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    line-height: 2.1rem;
+    padding-top: 1.5rem;
+    /* width: 61%; */
+}
+
+#flex3 {
+    display: flex;
+    padding-left: 0.84rem;
+}
+
+#flex11 {
+    display: flex;
+    padding-top: 1.5rem;
+    padding-left: 5.4rem;
+}
+
+#socio {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+#merge {
+    padding-top: 3rem;
+    margin-left: 2rem;
+}
+
+#bord0 {
+    border-left: 1.5px solid rgb(199, 195, 215);
+    padding-left: 1.5rem;
+}
+
+#bord1 {
+    border-left: 1.5px solid rgb(199, 195, 215);
+    margin-inline: 1.5rem;
+}
+
+#bord2 {
+    color: rgb(29, 201, 153);
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 47%;
+}
+
+#bgc {
+    padding-block: 4rem;
+    background-color: rgb(201, 243, 232);
+}
+
+#prog {
+    background-color: rgb(201, 243, 232);
+}
+
+#vision {
+    width: 90%;
+    margin: auto;
+}
+
+#target {
+    background-color: rgb(201, 243, 232);
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(33, 15, 96);
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+#tar {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(33, 15, 96);
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding-block: 1.4rem;
+}
+
+#lives {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(57, 15, 96);
+    font-size: 1.2rem;
+    width: 90%;
+    line-height: 2rem;
+}
+
+#unified {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(57, 15, 96);
+    font-size: 1.2rem;
+    width: 93%;
+    line-height: 2rem;
+}
+
+#dev {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#src {
+    /* height: 48vh; */
+    width: 84%;
+    height: 85%;
+    padding-top: 1rem;
+}
+
+#age {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(57, 15, 96);
+    font-size: 1.2rem;
+}
+
+#free {
+    padding-left: 1.4rem;
+    line-height: 2.9rem;
+}
+
+#free li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(57, 15, 96);
+    font-size: 1.2rem;
+}
+
+#we {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(33, 15, 96);
+    font-size: 2.3rem;
+    font-weight: 800;
+    width: 90%;
+    margin: auto;
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+
+#flex7 {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    /* border: 1px solid black; */
+    gap: 1rem;
+}
+
+/* #rehab {
+    width: 97%;
+} */
+
+#action {
+    background-color: rgb(201, 243, 232);
+}
+
+#faculty {
+    width: 100%;
+}
+
+#faculty img {
+    width: 100%;
+    height: 80%;
+    border-radius: 1rem;
+    /* max-height: 55vh; */
+}
+
+
+#rehab {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(33, 15, 96);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+#uni img {
+    height: 80%;
+    width: 91%;
+    border-radius: 1rem;
+}
+
+/* #uni {
+    width: 100%;
+} */
+
+#container2 {
+    background-color: rgb(38, 197, 153);
+    padding-block: 2rem;
+}
+
+#flex2 {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+}
+
+#press p {
+    font-size: 0.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: 600;
+}
+
+#press {
+    line-height: 1.5rem;
+}
+
+h3 {
+    font-size: 0.65rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: 800;
+    padding-bottom: 0.4rem;
+}
+
+#press li {
+    font-size: 0.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+    color: white;
+    line-height: normal;
+}
+
+#plot #add {
+    font-weight: 800;
+    font-size: 0.65rem;
+}
+
+#abj {
+    font-weight: 700;
+}
+
+#plot li {
+    font-size: 0.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+    color: white;
+    font-weight: 400;
+}
+
+#plot a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h4 {
+    font-size: 0.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+}
+
+#whistle {
+    padding-top: 1rem;
+    line-height: 1.3rem;
+}
+
+#whistle p {
+    font-size: 0.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: 600;
+}
+
+#flex4 {
+    display: flex;
+    justify-content: space-around;
+    padding-block: 1.5rem;
+}
+
+#copy {
+    /* display: inline-flex; */
+    padding-top: 0.7rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(33, 15, 96);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+@media (max-width:1199px) {
+    #flex {
+        display: block;
+        padding-block: 1.5rem;
+    }
+
+    h1 {
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    #games {
+        font-size: 1.01rem;
+        line-height: 1.7rem;
+        font-weight: 600;
+        padding-top: 1rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    #flex12 {
+        width: 100%;
+    }
+
+    #merge {
+        margin-left: 0;
+        padding-top: 1rem;
+    }
+
+    #bord2 {
+        width: 21%;
+        font-size: 1.1rem;
+    }
+
+    #socio {
+        font-size: 2rem;
+    }
+
+    #flex3 {
+        padding-left: 0;
+    }
+
+    #flex11 {
+        padding-left: 0;
+        padding-left: 2.5rem;
+    }
+
+    #dev {
+        display: block;
+        width: 95%;
+    }
+
+    #src {
+        width: 100%;
+    }
+
+    #vision {
+        width: 95%;
+    }
+
+    #flex7 {
+        display: block;
+        width: 95%;
+    }
+
+    #faculty img {
+        width: 100%;
+        /* height: 30%; */
+        max-height: 30vh;
+    }
+
+    #uni img {
+        max-height: 30vh;
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+
+@media (max-width:1024px) {
+    #faculty img {
+        width: 100%;
+        /* height: 30%; */
+        max-height: 25vh;
+    }
+
+    #flex2 {
+        display: block;
+    }
+
+    h3 {
+        font-size: 3.5rem;
+        padding-block: 3rem;
+    }
+
+    #press p {
+        font-size: 3rem;
+        line-height: 4.5rem;
+        font-weight: 400;
+    }
+
+    #whistle {
+        line-height: 5.5rem;
+    }
+
+    h4 {
+        font-size: 3rem;
+        width: 64%;
+    }
+
+    #whistle p {
+        font-size: 3rem;
+    }
+
+    #press li {
+        font-size: 3rem;
+        width: 58%;
+    }
+
+    #plot #add {
+        font-size: 3.5rem;
+        width: 61%;
+        padding-top: 4rem;
+    }
+
+    #abj {
+        font-size: 3.4rem;
+    }
+
+    #plot li {
+        font-size: 3rem;
+        line-height: 5rem;
+        width: 52%;
+    }
+
+    #plot a {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width:755px) {
+    h3 {
+        font-size: 3rem;
+        padding-block: 2.5rem;
+    }
+
+    #press p {
+        font-size: 2rem;
+        line-height: 4rem;
+        font-weight: 400;
+    }
+
+    #whistle {
+        line-height: 5rem;
+    }
+
+    h4 {
+        font-size: 2rem;
+        width: 64%;
+    }
+
+    #whistle p {
+        font-size: 2rem;
+    }
+
+    #press li {
+        font-size: 2rem;
+        width: 58%;
+    }
+
+    #plot #add {
+        font-size: 2.8rem;
+        width: 55%;
+        padding-top: 4rem;
+    }
+
+    #abj {
+        font-size: 2.2rem;
+    }
+
+    #plot li {
+        font-size: 2rem;
+        line-height: 3.5rem;
+        width: 45%;
+    }
+
+    #plot a {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width:585px) {
+    h3 {
+        font-size: 1.5rem;
+        padding-block: 1.5rem;
+    }
+
+    #press p {
+        font-size: 1rem;
+        line-height: 2rem;
+        font-weight: 400;
+    }
+
+    #whistle {
+        line-height: 2rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+        width: 37%;
+    }
+
+    #whistle p {
+        font-size: 1rem;
+    }
+
+    #press li {
+        font-size: 1.1rem;
+        width: 58%;
+    }
+
+    #plot #add {
+        font-size: 1.5rem;
+        width: 45%;
+        padding-top: 2rem;
+    }
+
+    #abj {
+        font-size: 1.5rem;
+    }
+
+    #plot li {
+        font-size: 1.1rem;
+        line-height: 2rem;
+        width: 40%;
+    }
+
+    #plot a {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width:400px) {
+    h3 {
+        font-size: 1.1rem;
+        padding-block: 0.5rem;
+    }
+
+    #press p {
+        font-size: 1rem;
+        line-height: 2rem;
+        font-weight: 400;
+    }
+
+    #whistle {
+        line-height: 2rem;
+    }
+
+    h4 {
+        font-size: 0.9rem;
+        width: 37%;
+    }
+
+    #whistle p {
+        font-size: 0.9rem;
+    }
+
+    #press li {
+        font-size: 1.1rem;
+        width: 58%;
+    }
+
+    #plot #add {
+        font-size: 1.1rem;
+        width: 45%;
+        padding-top: 2rem;
+    }
+
+    #abj {
+        font-size: 1rem;
+    }
+
+    #plot li {
+        font-size: 1rem;
+        line-height: 1.8rem;
+        width: 40%;
+    }
+
+    #plot a {
+        font-size: 0.8rem;
+    }
+}
